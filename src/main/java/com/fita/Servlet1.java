@@ -28,7 +28,7 @@ public class Servlet1 extends HttpServlet {
 			response.addCookie(ck);// adding cookie in the response
 
 			// creating submit button
-			out.print("<form action='Servlet2' method='post'>");
+			out.print("<form action='Servlet2" method='post'>");
 			out.print("<input type='submit' value='go'>");
 			out.print("</form>");
 

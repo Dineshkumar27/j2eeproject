@@ -49,11 +49,16 @@ public class DatabaseAccess extends HttpServlet {
 			stmt = conn.createStatement();
 
 			String sql;
-//			String sql2 = "update employees set age=34 where id=100";
-//			stmt.executeUpdate(sql2);
+//			String sql2 = "update employees set age=24 where id=101";
+//			out.println(stmt.executeUpdate(sql2) + " rows updated");
+//			String sql3 = "insert into employees values (100,23,'Kunal','jain')";
+//			stmt.executeUpdate(sql3);
+//			string id = Integer.ParseInt(request.getParmeter("id"));
+			String sql4 = "delete from employees where id=100";
+			stmt.executeUpdate(sql4);
 
-			String sql3 = "delete from employees where id=100";
-			stmt.executeUpdate(sql3);
+//			String sql3 = "delete from employees where id=100";
+//			stmt.executeUpdate(sql3);
 			sql = "SELECT id, first, last, age FROM Employees";
 			// Step 3: get the records
 			ResultSet rs = stmt.executeQuery(sql);

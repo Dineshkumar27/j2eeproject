@@ -36,8 +36,10 @@ public class Contextdemo extends HttpServlet {
 		String str = "";
 		while (e.hasMoreElements()) {
 			str = e.nextElement();
-			pw.print("<br> " + context.getInitParameter(str));
+			pw.print("<br>" + str);
+			pw.print(": " + context.getInitParameter(str));
 		}
+
 		pw.close();
 	}
 

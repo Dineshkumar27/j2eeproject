@@ -8,6 +8,14 @@
 </head>
 <body>
 <%="Fita Academy" %>
+<%=8+6 %>
+
+<% for(int i=1;i<10;i++){ %>
+
+<%=i %>
+<br>
+<%} %>
+
 Current Time: <%= java.util.Calendar.getInstance().getTime() %> 
 </body>
 </html>

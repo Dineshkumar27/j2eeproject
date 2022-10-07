@@ -3,7 +3,6 @@ package com.fita;
 import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,10 +20,11 @@ public class Servlet2 extends HttpServlet {
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 
-			Cookie ck[] = request.getCookies();
-			for (int i = 0; i < ck.length; i++)
-				out.println("Hello " + ck[i].getValue());
-
+//			Cookie ck[] = request.getCookies();
+//			for (int i = 0; i < ck.length; i++)
+//				out.println("Hello " + ck[i].getValue());
+			String uname = request.getParameter("uname");
+			out.println("Url Rewriting " + uname);
 			out.close();
 
 		} catch (Exception e) {
